@@ -22,6 +22,7 @@ def decode():
         except IndexError:
             break
         secret.append(secret_dec)
+    secret.append(" ")
     remove_temp()
     print("Done!")
 
@@ -33,6 +34,6 @@ def decode():
         else:
             encoded_array.append(int("".join(number_array)))
             number_array = []
-    encoded_array.append(int("".join(number_array)))
+
     decoded_message = RSA.decrypt(private_key, encoded_array)
     print("Decoded message:", decoded_message)

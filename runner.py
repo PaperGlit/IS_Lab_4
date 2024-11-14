@@ -1,6 +1,5 @@
-from decode import decode
-from encode import encode
+from console import main
 
 
-# encode()
-decode()
+if __name__ == '__main__':
+    main()
