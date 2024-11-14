@@ -4,7 +4,7 @@ import random
 
 class RSA:
     def __init__(self):
-        self.public_key, self.private_key = self.generate_keys()
+            self.public_key, self.private_key = self.generate_keys()
 
     @staticmethod
     def is_prime(n):
@@ -39,9 +39,8 @@ class RSA:
         d = pow(e, -1, phi)
         return (n, e), (n, d)
 
-    @staticmethod
-    def encrypt(message, public_key):
-        n, e = public_key
+    def encrypt(self, message):
+        n, e = self.public_key
         encrypted_message = [pow(ord(char), e, n) for char in message]
         return encrypted_message
 

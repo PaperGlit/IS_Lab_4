@@ -4,7 +4,6 @@ import os
 
 def split_string(s_str):
     count = len([f for f in os.listdir("temp") if os.path.isfile(os.path.join("temp", f))])
-    count = 10
     per_c=math.ceil(len(s_str)/count)
     c_count=0
     out_str=''
